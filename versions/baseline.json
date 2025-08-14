@@ -1,8 +1,8 @@
 {
   "default": {
     "llvm": {
-      "baseline": "18.1.6",
-      "port-version": 6
+      "baseline": "21.1.0-rc3",
+      "port-version": 0
     }
   }
 }

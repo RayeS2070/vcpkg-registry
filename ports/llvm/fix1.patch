@@ -1,0 +1,13 @@
+diff --git a/clang/lib/Sema/SemaDeclCXX.cpp b/clang/lib/Sema/SemaDeclCXX.cpp
+index d069eba61..54d59a6b5 100644
+--- a/clang/lib/Sema/SemaDeclCXX.cpp
++++ b/clang/lib/Sema/SemaDeclCXX.cpp
+@@ -9512,7 +9512,7 @@ bool SpecialMemberDeletionInfo::shouldDeleteForSubobjectCall(
+   int DiagKind = -1;
+ 
+   if (SMOR.getKind() == Sema::SpecialMemberOverloadResult::NoMemberOrDeleted) {
+-    if (CSM == Sema::CXXDefaultConstructor && Field &&
++    if (CSM == CXXSpecialMemberKind::DefaultConstructor && Field &&
+         Field->getParent()->isUnion()) {
+       // [class.default.ctor]p2:
+       //   A defaulted default constructor for class X is defined as deleted if
